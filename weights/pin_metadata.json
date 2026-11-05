@@ -1,0 +1,26 @@
+{
+  "expected_pin_count": 3,
+  "roi_y_start_ratio": 0.78,
+  "roi_size": [
+    256,
+    256
+  ],
+  "min_length_px": 65.52,
+  "max_length_px": 245.4,
+  "mean_length_px": 127.65,
+  "min_width_px": 11.13,
+  "max_width_px": 55.5,
+  "max_angle_deg": 14.5,
+  "mean_angle_deg": 3.46,
+  "min_spacing_px": 43.0,
+  "max_spacing_px": 80.5,
+  "mean_spacing_px": 58.32,
+  "max_spacing_asymmetry_px": 20.0,
+  "max_dark_occlusion_width_px": 35.0,
+  "slot_centers_x": [
+    64.2,
+    123.0,
+    180.9
+  ],
+  "num_calibrated_boards": 47
+}

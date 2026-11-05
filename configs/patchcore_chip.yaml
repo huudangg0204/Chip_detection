@@ -1,0 +1,44 @@
+model:
+  name: patchcore
+  backbone: wide_resnet50_2
+  pre_trained: true
+  layers:
+    - layer2
+    - layer3
+  coreset_sampling_ratio: 0.1
+  num_neighbors: 9
+
+preprocess:
+  image_size: [256, 256]
+  full_board_size: [144, 640]  # [width, height] aspect-preserved (~4.44:1)
+  apply_clahe: true
+  clahe_clip_limit: 1.5
+  crop_margin_ratio: 0.025
+  head_margin_ratio: 0.025
+  side_margin_ratio: 0.03
+  pin_extension_ratio: 0.22
+  pcb_aspect_ratio_expected: 4.0
+  pcb_aspect_ratio_tolerance: 0.65
+  mask_background: true
+  background_fill_rgb: [0, 0, 0]
+  min_contour_area_ratio: 0.008
+  max_contour_area_ratio: 0.70
+  min_aspect_ratio: 2.0
+  max_aspect_ratio: 6.0
+
+pin_check:
+  enabled: true
+  roi_y_start_ratio: 0.78
+  roi_size: [256, 256]
+  expected_pin_count: 3
+  metadata_path: "weights/pin_metadata.json"
+  default_sensitivity: 1.0
+
+camera:
+  roi: [0.2, 0.2, 0.8, 0.8]  # [ymin, xmin, ymax, xmax] normalized in [0.0, 1.0]
+  stable_frames_required: 10
+  movement_threshold: 5.0
+  cooldown_empty_frames: 5
+
+decision:
+  default_threshold: 0.50

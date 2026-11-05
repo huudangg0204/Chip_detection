@@ -1,0 +1,27 @@
+{
+  "model_name": "patchcore",
+  "backbone": "wide_resnet50_2",
+  "layers": [
+    "layer2",
+    "layer3"
+  ],
+  "backend_type": "torch_backbone",
+  "coreset_sampling_ratio": 0.1,
+  "memory_bank_size": 4096,
+  "feature_dim": 1536,
+  "image_size": [
+    256,
+    256
+  ],
+  "score_min": 0.20258,
+  "score_scale": 0.321619,
+  "optimal_threshold": 0.5634,
+  "auroc": 1.0,
+  "f1_score": 1.0,
+  "precision": 1.0,
+  "recall": 1.0,
+  "num_train_normal": 47,
+  "accuracy": 1.0,
+  "num_normal_val": 13,
+  "num_abnormal_test": 12
+}

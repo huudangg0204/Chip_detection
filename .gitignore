@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+
+# Virtual environments & env vars
+.venv/
+env/
+venv/
+ENV/
+.env
+.env.*
+
+# Testing, Linting & Agent caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+graphify-out/
+
+# Model weights & backups (keep official checkpoint & calibration metadata)
+weights/*.ckpt
+!weights/patchcore_best.ckpt
+weights/*.pt
+weights/*.pth
+weights/*.bin
+weights/*.bak
+weights/backup_*/
+*.bak
+
+# Full raw datasets, bundles & generated debug outputs
+data/
+colab_bundle.zip
+*.zip
+*.tar.gz
+outputs/*
+!outputs/.gitkeep
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
